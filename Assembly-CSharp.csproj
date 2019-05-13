@@ -65,6 +65,7 @@
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\NotAsteroid.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\ShieldActivateScript.cs" />
     <Reference Include="UnityEditor.StandardEvents">
       <HintPath>C:/Program Files/Unity/Assteroids/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>

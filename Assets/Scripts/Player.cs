@@ -1,19 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Player : MonoBehaviour {
 
     
 
     Rigidbody2D rb;
+    public GameObject Shield = new GameObject();
 
     public int hp = 100;
     
     
     float maxVelX = 5.0F;
-    public float buzzkill = 5f;
-    public float buzzkill2 = 1f;
+  
 
     
     
@@ -28,7 +26,8 @@ public class Player : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rb = GetComponent<Rigidbody2D>();
-	}
+        Shield.gameObject.SetActive(false);
+    }
 
     // Update is called once per frame
     void Update()
@@ -147,9 +146,8 @@ public class Player : MonoBehaviour {
         //Debug.Log("Collision detected");
         if (col.tag == "Enemy")
         {
-            forceX = forceX - buzzkill;
-            maxVelX = maxVelX - buzzkill2;
             Destroy(col.gameObject);
+            Shield.gameObject.SetActive(true);
         }
         //if (col.tag == "Player")
         //{
