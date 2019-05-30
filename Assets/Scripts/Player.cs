@@ -1,37 +1,43 @@
 ﻿using UnityEngine;
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
 
-    
+
 
     Rigidbody2D rb;
+    Player player;
     public GameObject Shield = new GameObject();
+    public GameObject RocketTrail = new GameObject();
 
-    public int hp = 100;
-    
-    
+    public int percent = 100;
+
+
     float maxVelX = 5.0F;
-  
 
-    
-    
+
+
+
     float limitXLeft = -2.86f;
     float limitXRight = 2.86f;
 
 
     public float forceX = 20.0f;
 
-   
+
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
-        Shield.gameObject.SetActive(false);
+        
+        //Shield.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
+        Instantiate(RocketTrail);
         transform.Translate(Input.acceleration.x, 0, 0);
 
         /* float valX = Input.GetAxis("Horizontal");
@@ -84,7 +90,7 @@ public class Player : MonoBehaviour {
 
         Vector3 pos = transform.position;
 
-        if(pos.x < limitXLeft)
+        if (pos.x < limitXLeft)
         {
             pos.x = limitXLeft;
         }
@@ -134,10 +140,10 @@ public class Player : MonoBehaviour {
 
     public void hurt(int damage)
     {
-        hp -= damage; 
-        if(hp <= 0)
-        { 
-            hp = 0;
+        percent -= damage;
+        if (percent <= 0)
+        {
+            percent = 0;
             Destroy(gameObject);
         }
     }
@@ -146,14 +152,19 @@ public class Player : MonoBehaviour {
         //Debug.Log("Collision detected");
         if (col.tag == "Enemy")
         {
-            Destroy(col.gameObject);
-            Shield.gameObject.SetActive(true);
-        }
-        //if (col.tag == "Player")
-        //{
-        // player.hurt(25);
-        //Destroy(col.gameObject);
-    }
 
+            // Destroy(col.gameObject);
+            Instantiate(Shield);
+            player.hurt(25);
+            
+        }
+       /* if (col.tag == "Player")
+        {
+            player.hurt(25);
+            Destroy(col.gameObject);
+        }*/
+    }
 }
+
+
 

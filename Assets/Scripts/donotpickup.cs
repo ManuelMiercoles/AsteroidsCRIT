@@ -5,6 +5,7 @@ using UnityEngine;
 public class donotpickup : MonoBehaviour
 {
     public GameObject particle2;
+    public GameObject debris;
     public float forceY = -700;
     //float randY = 0;
 
@@ -49,6 +50,8 @@ public class donotpickup : MonoBehaviour
         //Debug.Log("Collision detected");
         if (col.tag == "Player")
         {
+            Instantiate(particle2);
+            Instantiate(debris);
             player.hurt(25);
             Destroy(gameObject);
             //Destroy(col.gameObject);
