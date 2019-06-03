@@ -33,15 +33,16 @@ public class GameController : MonoBehaviour
         while (true)
         {
             int aynrand = Random.Range(0, 3);
-
+            int s = 0;
 
             switch (aynrand)
             {
             case 0:
-           // for (int i = 0; i < pickupNumber; i++)
+         //  for (int i = 0; i < 25; i++)
             {
                 yield return new WaitForSeconds(1.0f);
                 Instantiate(asteroid);
+                        s++;
             }
                     break;
             case 1:
@@ -49,6 +50,7 @@ public class GameController : MonoBehaviour
             {
                 yield return new WaitForSeconds(1.0f);
                 Instantiate(asteroid);
+                        s++;
             }
                     break;
             case 3:
@@ -56,9 +58,14 @@ public class GameController : MonoBehaviour
                     {
                         yield return new WaitForSeconds(1.0f);
                         Instantiate(asteroid);
+                        s++;
                     }
                     break;
 
+            }
+            if (s == 30)
+            {
+               
             }
     }
 }
