@@ -156,7 +156,8 @@ public class Player : MonoBehaviour
             // Destroy(col.gameObject);
             Instantiate(Shield);
             player.hurt(25);
-            
+            Destroy(col.gameObject);
+
         }
        /* if (col.tag == "Player")
         {

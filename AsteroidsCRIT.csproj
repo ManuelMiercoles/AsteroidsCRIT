@@ -223,17 +223,42 @@
     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX\Scripts\CFX_AutoRotate.cs" />
     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightFlicker.cs" />
     <Compile Include="Assets\Assets\JMO Assets\Cartoon FX\Scripts\CFX_LightIntensityFade.cs" />
+    <Compile Include="Assets\SampleUI\Scripts\ActiveStateToggler.cs" />
+    <Compile Include="Assets\SampleUI\Scripts\ApplicationManager.cs" />
+    <Compile Include="Assets\SampleUI\Scripts\ChangeColor.cs" />
+    <Compile Include="Assets\SampleUI\Scripts\DragMe.cs" />
+    <Compile Include="Assets\SampleUI\Scripts\DragPanel.cs" />
+    <Compile Include="Assets\SampleUI\Scripts\DropMe.cs" />
+    <Compile Include="Assets\SampleUI\Scripts\LoadSceneOnClick.cs" />
+    <Compile Include="Assets\SampleUI\Scripts\NewBehaviourScript.cs" />
+    <Compile Include="Assets\SampleUI\Scripts\PanelManager.cs" />
+    <Compile Include="Assets\SampleUI\Scripts\QuitOnClick.cs" />
+    <Compile Include="Assets\SampleUI\Scripts\ResizePanel.cs" />
+    <Compile Include="Assets\SampleUI\Scripts\ScrollDetailTexture.cs" />
+    <Compile Include="Assets\SampleUI\Scripts\SelectOnInput.cs" />
+    <Compile Include="Assets\SampleUI\Scripts\ShowSliderValue.cs" />
+    <Compile Include="Assets\SampleUI\Scripts\TiltWindow.cs" />
+    <Compile Include="Assets\Scripts\Bullet.cs" />
     <Compile Include="Assets\Scripts\donotpickup.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\IDamage.cs" />
     <Compile Include="Assets\Scripts\NotAsteroid.cs" />
+    <Compile Include="Assets\Scripts\OmniScript.cs" />
+    <Compile Include="Assets\Scripts\OmniScript1.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\ShieldActivateScript.cs" />
+    <Compile Include="Assets\Scripts\Torreta.cs" />
+    <Compile Include="Assets\Scripts\TorretaMovimiento.cs" />
+    <Compile Include="Assets\Scripts\TorretaTecho.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Assets\JMO Assets\Cartoon FX Easy Editor\CartoonFX Easy Editor Readme.txt" />
     <None Include="Assets\Assets\JMO Assets\Cartoon FX\CartoonFX Free.txt" />
     <None Include="Assets\Assets\JMO Assets\Cartoon FX\Shaders\CFX3 Multiply Color.shader" />
     <None Include="Assets\Assets\JMO Assets\Cartoon FX\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
+    <None Include="Assets\SampleUI\Fonts\Jupiter\LICENSE.txt" />
+    <None Include="Assets\SampleUI\Materials\UI-Default-No-Alpha.shader" />
+    <None Include="Assets\SampleUI\Textures and Sprites\SF UI\Background\LICENSE.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

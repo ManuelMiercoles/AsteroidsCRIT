@@ -5,13 +5,15 @@ using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
-    public int score;
+    public int score = 100;
     //public GameObject Pickup;
     public GameObject asteroid;
-    
+
     //int pickupNumber = 10;
 
     public Text scoretext;
+   
+   
 
     GameObject player;
 
@@ -19,6 +21,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         StartCoroutine("spawnProcess");
+        GameObject.Find("scoretext").SetActive(false);
 
 
     }
@@ -37,24 +40,24 @@ public class GameController : MonoBehaviour
 
             switch (aynrand)
             {
-            case 0:
-         //  for (int i = 0; i < 25; i++)
-            {
-                yield return new WaitForSeconds(1.0f);
-                Instantiate(asteroid);
+                case 0:
+                    //  for (int i = 0; i < 25; i++)
+                    {
+                        yield return new WaitForSeconds(1.0f);
+                        Instantiate(asteroid);
                         s++;
-            }
+                    }
                     break;
-            case 1:
-           // for (int i = 0; i < pickupNumber; i++)
-            {
-                yield return new WaitForSeconds(1.0f);
-                Instantiate(asteroid);
+                case 1:
+                    // for (int i = 0; i < pickupNumber; i++)
+                    {
+                        yield return new WaitForSeconds(1.0f);
+                        Instantiate(asteroid);
                         s++;
-            }
+                    }
                     break;
-            case 3:
-                   // for (int i = 0; i < pickupNumber; i++)
+                case 3:
+                    // for (int i = 0; i < pickupNumber; i++)
                     {
                         yield return new WaitForSeconds(1.0f);
                         Instantiate(asteroid);
@@ -65,16 +68,30 @@ public class GameController : MonoBehaviour
             }
             if (s == 30)
             {
-               
+                GameObject.Find("scorecanvas").SetActive(true);
             }
+        }
     }
-}
     public void incrementScore()
     {
-        score++;
+       // score = -1;
         GameObject obj = GameObject.Find("scoretext");
-        scoretext.text = "Score: " + score;
+        scoretext.text = "Score: " + score ;
         Debug.Log("score: " + score);
-    }
+   }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        //Debug.Log("Collision detected");
+        if (col.tag == "Player")
+        {
+            score = -1;
+            GameObject obj = GameObject.Find("scoretext");
+            scoretext.text = "Score: " + score + "Percent";
+            Debug.Log("score: " + score);
+            Destroy(gameObject);
 
+
+        }
+
+    }
 }
