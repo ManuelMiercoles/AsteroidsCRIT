@@ -7,6 +7,7 @@ public class Player : MonoBehaviour
 
     Rigidbody2D rb;
     Player player;
+    public AudioClip crash;
     public GameObject Shield = new GameObject();
     public GameObject RocketTrail = new GameObject();
 
@@ -27,10 +28,12 @@ public class Player : MonoBehaviour
 
 
     // Use this for initialization
-    void Start()
+   public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
+        GetComponent<AudioSource>().playOnAwake = false;
+        GetComponent<AudioSource>().clip = crash;
+
         //Shield.gameObject.SetActive(false);
     }
 
@@ -154,6 +157,7 @@ public class Player : MonoBehaviour
         {
 
             // Destroy(col.gameObject);
+            GetComponent<AudioSource>().Play();
             Instantiate(Shield);
             player.hurt(25);
             Destroy(col.gameObject);

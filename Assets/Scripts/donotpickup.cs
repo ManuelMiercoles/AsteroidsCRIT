@@ -6,6 +6,8 @@ public class donotpickup : MonoBehaviour
 {
     public GameObject particle2;
     public GameObject debris;
+    public GameObject asteroid;
+    public AudioClip crash;
     public float forceY = -700;
     //float randY = 0;
 
@@ -15,9 +17,11 @@ public class donotpickup : MonoBehaviour
     GameController gc;
 
     // Use this for initialization
-    void Start()
+    public void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        GetComponent<AudioSource>().playOnAwake = false;
+        GetComponent<AudioSource>().clip = crash;
 
         float randX = Random.Range(-2.85f, 2.85f);
         Vector3 pos = transform.position;
@@ -45,15 +49,17 @@ public class donotpickup : MonoBehaviour
 
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+   public void OnTriggerEnter2D(Collider2D col)
     {
         //Debug.Log("Collision detected");
         if (col.tag == "Player")
         {
+            GetComponent<AudioSource>().Play();
+            Destroy(asteroid);
             Instantiate(particle2);
             Instantiate(debris);
             player.hurt(25);
-            Destroy(gameObject);
+            
             //Destroy(col.gameObject);
         }
     }

@@ -8,12 +8,13 @@ public class GameController : MonoBehaviour
     public int score = 100;
     //public GameObject Pickup;
     public GameObject asteroid;
+    public int s = 0;
 
     //int pickupNumber = 10;
 
     public Text scoretext;
-   
-   
+
+
 
     GameObject player;
 
@@ -21,7 +22,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         StartCoroutine("spawnProcess");
-        GameObject.Find("scoretext").SetActive(false);
+       GameObject.Find("scoretext").SetActive(false);
 
 
     }
@@ -31,67 +32,72 @@ public class GameController : MonoBehaviour
     {
 
     }
-    IEnumerator spawnProcess()
-    {
-        while (true)
-        {
-            int aynrand = Random.Range(0, 3);
-            int s = 0;
-
-            switch (aynrand)
-            {
-                case 0:
-                    //  for (int i = 0; i < 25; i++)
-                    {
-                        yield return new WaitForSeconds(1.0f);
-                        Instantiate(asteroid);
-                        s++;
-                    }
-                    break;
-                case 1:
-                    // for (int i = 0; i < pickupNumber; i++)
-                    {
-                        yield return new WaitForSeconds(1.0f);
-                        Instantiate(asteroid);
-                        s++;
-                    }
-                    break;
-                case 3:
-                    // for (int i = 0; i < pickupNumber; i++)
-                    {
-                        yield return new WaitForSeconds(1.0f);
-                        Instantiate(asteroid);
-                        s++;
-                    }
-                    break;
-
-            }
-            if (s == 30)
-            {
-                GameObject.Find("scorecanvas").SetActive(true);
-            }
-        }
-    }
     public void incrementScore()
     {
-       // score = -1;
+        // score = -1;
         GameObject obj = GameObject.Find("scoretext");
-        scoretext.text = "Score: " + score ;
+        scoretext.text = "Score: " + score;
         Debug.Log("score: " + score);
-   }
-    void OnTriggerEnter2D(Collider2D col)
+    }
+    public void OnTriggerEnter2D(Collider2D col)
     {
         //Debug.Log("Collision detected");
         if (col.tag == "Player")
         {
-            score = -1;
+            score = -6;
             GameObject obj = GameObject.Find("scoretext");
             scoretext.text = "Score: " + score + "Percent";
             Debug.Log("score: " + score);
-            Destroy(gameObject);
+            Destroy(asteroid);
 
 
         }
-
     }
-}
+        IEnumerator spawnProcess()
+        {
+            while (true)
+            {
+                int aynrand = Random.Range(0, 3);
+
+
+                switch (aynrand)
+                {
+                    case 0:
+                        //  for (int i = 0; i < 25; i++)
+                        {
+                            yield return new WaitForSeconds(1.0f);
+                            Instantiate(asteroid);
+                            s++;
+                        }
+                        break;
+                    case 1:
+                        // for (int i = 0; i < pickupNumber; i++)
+                        {
+                            yield return new WaitForSeconds(1.0f);
+                            Instantiate(asteroid);
+                            s++;
+                        }
+                        break;
+                    case 3:
+                        // for (int i = 0; i < pickupNumber; i++)
+                        {
+                            yield return new WaitForSeconds(1.0f);
+                            Instantiate(asteroid);
+                            s++;
+                        }
+                        break;
+
+                }
+                if (s == 15)
+                {
+                    GameObject.Find("scoretext").SetActive(true);
+                    if (scoretext.isActiveAndEnabled)
+                    {
+                        Time.timeScale = 0;
+                    }
+                }
+            }
+
+
+        }
+    }
