@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     Player player;
     public AudioClip crash;
     public GameObject Shield = new GameObject();
-    public GameObject RocketTrail = new GameObject();
+  //  public GameObject RocketTrail = new GameObject();
 
     public int percent = 100;
 
@@ -40,7 +40,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Instantiate(RocketTrail);
+        //Instantiate(RocketTrail);
         transform.Translate(Input.acceleration.x, 0, 0);
 
         /* float valX = Input.GetAxis("Horizontal");
