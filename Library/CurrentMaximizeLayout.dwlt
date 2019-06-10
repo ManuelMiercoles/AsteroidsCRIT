@@ -20,10 +20,10 @@ MonoBehaviour:
     y: 30
     width: 1360
     height: 635
-  m_MinSize: {x: 683, y: 492}
+  m_MinSize: {x: 681, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 12580
+  controlID: 3780
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -120,10 +120,10 @@ MonoBehaviour:
     y: 0
     width: 1024
     height: 635
-  m_MinSize: {x: 406, y: 492}
+  m_MinSize: {x: 404, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 12581
+  controlID: 3781
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,10 +144,10 @@ MonoBehaviour:
     y: 0
     width: 1024
     height: 364
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 12582
+  controlID: 3782
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -201,9 +201,9 @@ MonoBehaviour:
     height: 343
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 5a430000
-    m_LastClickedID: 17242
-    m_ExpandedIDs: 1a61faff8a6efaffc06efaffd6e4fcffd8e4fcfff2f7ffffa6fbffff00000000442e000022430000
+    m_SelectedIDs: 6a010000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 765effffa289ffffae89ffffa4d0ffffe2ecffff80fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -222,7 +222,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
   m_ExpandedScenes:
-  - MainMenu
+  - AsteroidScene
   m_CurrenRootInstanceID: 0
   m_Locked: 0
   m_CurrentSortingName: TransformSorting
@@ -281,14 +281,14 @@ MonoBehaviour:
     width: 817
     height: 343
   m_SceneLighting: 1
-  lastFramingTime: 1748.6252019395058
+  lastFramingTime: 1723.5797721654149
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -21.5, y: -45.949997, z: 0}
+    m_Target: {x: 158.74109, y: 170.00003, z: 0}
     speed: 2
-    m_Value: {x: -21.5, y: -45.949997, z: 0}
+    m_Value: {x: 158.74109, y: 170.00003, z: 0}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -315,9 +315,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.17784694, y: 0.014443986, z: -0.0026850835, w: -0.9840037}
   m_Size:
-    m_Target: 1125.4303
+    m_Target: 1097.807
     speed: 2
-    m_Value: 1125.4303
+    m_Value: 1097.807
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -416,8 +416,8 @@ MonoBehaviour:
     y: 364
     width: 1024
     height: 271
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
+  m_MinSize: {x: 230, y: 250}
+  m_MaxSize: {x: 10000, y: 10000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -471,10 +471,10 @@ MonoBehaviour:
   m_LastProjectPath: C:\Users\Manuel Mier\Documents\GitHub\AsteroidsCRIT
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 3}
-    m_SelectedIDs: 88280000
-    m_LastClickedID: 10376
-    m_ExpandedIDs: 00000000bc270000d82700009e280000ce2900000c2b0000a62b0000ba2b0000282c0000522c000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: c8280000
+    m_LastClickedID: 10440
+    m_ExpandedIDs: 00000000e427000006280000c8280000e0280000262a0000802b0000282c00003e2c0000b22c0000e02c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -502,7 +502,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000bc270000d82700009e280000ce2900000c2b0000a62b0000ba2b0000282c0000522c000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000e427000006280000c8280000e0280000262a0000802b0000282c00003e2c0000b22c0000e02c000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -527,8 +527,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 5a430000
-    m_LastClickedInstanceID: 17242
+    m_SelectedInstanceIDs: 6a010000
+    m_LastClickedInstanceID: 362
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000bef5feff6ae0fdffe405000000000000c82700002a35000008acfcff
     m_RenameOverlay:
@@ -554,7 +554,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 10}
     m_GridSize: 72
   m_DirectoriesAreaWidth: 278
 --- !u!114 &13
@@ -580,9 +580,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 462
+    y: 456
     width: 1022
-    height: 244
+    height: 250
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -601,8 +601,8 @@ MonoBehaviour:
     y: 0
     width: 336
     height: 635
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -634,7 +634,7 @@ MonoBehaviour:
     y: 92
     width: 334
     height: 614
-  m_ScrollPosition: {x: 0, y: 79.95508}
+  m_ScrollPosition: {x: 0, y: 0}
   m_InspectorMode: 0
   m_PreviewResizer:
     m_CachedPref: -160

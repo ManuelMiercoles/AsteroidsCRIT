@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2017
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsteroidsCRIT", "AsteroidsCRIT.csproj", "{9642ADD7-DFE2-B1BB-F496-91CC73DFE46C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AsteroidsCRIT.Editor", "AsteroidsCRIT.Editor.csproj", "{1A7178A8-89AB-30FB-664B-C093C7303545}"
