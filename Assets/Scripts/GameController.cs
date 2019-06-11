@@ -22,7 +22,7 @@ public class GameController : MonoBehaviour
     void Start()
     {
         StartCoroutine("spawnProcess");
-       GameObject.Find("scoretext").SetActive(false);
+      // GameObject.Find("scoretext").SetActive(false);
 
 
     }
@@ -30,7 +30,9 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(s == 15) {
+            GameObject.Find("scoretext").SetActive(true);
+        }
     }
     public void incrementScore()
     {
@@ -90,11 +92,8 @@ public class GameController : MonoBehaviour
                 }
                 if (s == 15)
                 {
-                    GameObject.Find("scoretext").SetActive(true);
-                    if (scoretext.isActiveAndEnabled)
-                    {
-                        Time.timeScale = 0;
-                    }
+                Time.timeScale = 0;
+                    
                 }
             }
 

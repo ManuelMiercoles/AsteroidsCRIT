@@ -5,16 +5,16 @@ public class Player : MonoBehaviour
 
 
 
-    Rigidbody2D rb;
+   // Rigidbody2D rb;
     Player player;
     public AudioClip crash;
-    public GameObject Shield = new GameObject();
-    public GameObject RocketTrail = new GameObject();
+   // GameObject Shield = new GameObject();
+   // public GameObject RocketTrail = new GameObject();
 
     public int percent = 100;
 
 
-    float maxVelX = 5.0F;
+    //float maxVelX = 5.0F;
 
 
 
@@ -23,24 +23,24 @@ public class Player : MonoBehaviour
     float limitXRight = 2.86f;
 
 
-    public float forceX = 20.0f;
+   // public float forceX = 20.0f;
 
 
 
     // Use this for initialization
    public void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        //rb = GetComponent<Rigidbody2D>();
         GetComponent<AudioSource>().playOnAwake = false;
         GetComponent<AudioSource>().clip = crash;
-
+       // Instantiate(RocketTrail);
         //Shield.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
-    void Update()
+   public void Update()
     {
-        Instantiate(RocketTrail);
+       
         transform.Translate(Input.acceleration.x, 0, 0);
 
         /* float valX = Input.GetAxis("Horizontal");
@@ -148,6 +148,7 @@ public class Player : MonoBehaviour
         {
             percent = 0;
             Destroy(gameObject);
+           // Instantiate(Shield);
         }
     }
     void OnTriggerEnter2D(Collider2D col)
@@ -158,7 +159,7 @@ public class Player : MonoBehaviour
 
             // Destroy(col.gameObject);
             GetComponent<AudioSource>().Play();
-            Instantiate(Shield);
+            
             player.hurt(25);
             Destroy(col.gameObject);
 
